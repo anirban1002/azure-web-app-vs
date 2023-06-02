@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "azure-web-app-vs", "azure-web-app-vs\azure-web-app-vs.csproj", "{76CE204C-F550-4ADD-B6A9-6B4B9F26B635}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "azure-web-api", "azure-web-api\azure-web-api.csproj", "{25CA478A-6C1A-4689-8F22-587A08D35801}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "azure-web-api", "azure-web-api\azure-web-api.csproj", "{25CA478A-6C1A-4689-8F22-587A08D35801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "azure-storage-account", "azure-storage-account\azure-storage-account.csproj", "{A2E3CE6C-51AC-4FBE-A2E7-6DEB05508B93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{25CA478A-6C1A-4689-8F22-587A08D35801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25CA478A-6C1A-4689-8F22-587A08D35801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25CA478A-6C1A-4689-8F22-587A08D35801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E3CE6C-51AC-4FBE-A2E7-6DEB05508B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E3CE6C-51AC-4FBE-A2E7-6DEB05508B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E3CE6C-51AC-4FBE-A2E7-6DEB05508B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E3CE6C-51AC-4FBE-A2E7-6DEB05508B93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
