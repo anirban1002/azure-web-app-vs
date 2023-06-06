@@ -33,7 +33,6 @@ namespace azure_storage_account.Services
                 return blobName;
             }
         }
-
         public async Task<string> GetBlobUrl(string imageName)
         {
             var container = await GetBlobContainerClient();

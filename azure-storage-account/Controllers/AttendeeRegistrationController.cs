@@ -1,4 +1,5 @@
 ﻿using azure_storage_account.Data;
+using azure_storage_account.Models;
 using azure_storage_account.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,11 +10,13 @@ namespace azure_storage_account.Controllers
     {
         private readonly ITableStorageService _tableStorageService;
         private readonly IBlobStorageService _blobStorageService;
+        private readonly IQueueService _queueService;
 
-        public AttendeeRegistrationController(ITableStorageService tableStorageService, IBlobStorageService blobStorageService)
+        public AttendeeRegistrationController(ITableStorageService tableStorageService, IBlobStorageService blobStorageService, IQueueService queueService)
         {
             _tableStorageService = tableStorageService;
             _blobStorageService = blobStorageService;
+            _queueService = queueService;
         }
         // GET: AttendeeRegistrationController
         public async Task<ActionResult> Index()
@@ -62,6 +65,17 @@ namespace azure_storage_account.Controllers
                 }
 
                 await _tableStorageService.UpsertAttendee(attendeeEntity);
+
+                var email = new EmailMessage
+                {
+                    EmailAddress = attendeeEntity.EmailAddress,
+                    TimeStamp = DateTime.UtcNow,
+                    Message = $"Hello {attendeeEntity.FirstName} {attendeeEntity.LastName}," +
+                    $"\n\r Thank you for registering for this event."
+                };
+
+                await _queueService.SendMessage(email);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -87,7 +101,7 @@ namespace azure_storage_account.Controllers
                 if (formFile?.Length > 0)
                 {
                     attendeeEntity.ImageName =
-                        await _blobStorageService.UploadBlob(formFile, attendeeEntity.RowKey,attendeeEntity.ImageName);
+                        await _blobStorageService.UploadBlob(formFile, attendeeEntity.RowKey, attendeeEntity.ImageName);
                 }
                 attendeeEntity.PartitionKey = attendeeEntity.Industry;
 
