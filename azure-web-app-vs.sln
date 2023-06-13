@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueConsumer", "QueueConsu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusSender", "ServiceBusSender\ServiceBusSender.csproj", "{3ADAC943-B1E0-4B14-9B54-FD631AD572E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBusReceiver", "ServiceBusReceiver\ServiceBusReceiver.csproj", "{F46CBDD0-AA48-4643-B987-381D2A8874B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusReceiver", "ServiceBusReceiver\ServiceBusReceiver.csproj", "{F46CBDD0-AA48-4643-B987-381D2A8874B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusSenderTopic", "ServiceBusSenderTopic\ServiceBusSenderTopic.csproj", "{4CEA6EAF-9147-4D28-8FE1-BA6246812092}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusReceiverTopic", "ServiceBusReceiverTopic\ServiceBusReceiverTopic.csproj", "{BB5E5510-C679-4934-BF26-144090CCCB77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionApp.Demo", "FunctionApp.Demo\FunctionApp.Demo.csproj", "{36CB97CA-5C5C-4BD7-BAF9-9C1366BC4034}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{F46CBDD0-AA48-4643-B987-381D2A8874B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F46CBDD0-AA48-4643-B987-381D2A8874B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F46CBDD0-AA48-4643-B987-381D2A8874B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CEA6EAF-9147-4D28-8FE1-BA6246812092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CEA6EAF-9147-4D28-8FE1-BA6246812092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CEA6EAF-9147-4D28-8FE1-BA6246812092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CEA6EAF-9147-4D28-8FE1-BA6246812092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5E5510-C679-4934-BF26-144090CCCB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5E5510-C679-4934-BF26-144090CCCB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5E5510-C679-4934-BF26-144090CCCB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5E5510-C679-4934-BF26-144090CCCB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36CB97CA-5C5C-4BD7-BAF9-9C1366BC4034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36CB97CA-5C5C-4BD7-BAF9-9C1366BC4034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36CB97CA-5C5C-4BD7-BAF9-9C1366BC4034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36CB97CA-5C5C-4BD7-BAF9-9C1366BC4034}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
