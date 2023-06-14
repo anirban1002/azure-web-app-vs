@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusSenderTopic", "Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBusReceiverTopic", "ServiceBusReceiverTopic\ServiceBusReceiverTopic.csproj", "{BB5E5510-C679-4934-BF26-144090CCCB77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionApp.Demo", "FunctionApp.Demo\FunctionApp.Demo.csproj", "{36CB97CA-5C5C-4BD7-BAF9-9C1366BC4034}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionApp.Demo", "FunctionApp.Demo\FunctionApp.Demo.csproj", "{36CB97CA-5C5C-4BD7-BAF9-9C1366BC4034}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
