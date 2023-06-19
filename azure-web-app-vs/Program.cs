@@ -1,4 +1,5 @@
 using azure_web_app_vs.Data;
+using Microsoft.ApplicationInsights.AspNetCore.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,12 @@ var connectionString = builder.Configuration.GetConnectionString("AzureSqlConnec
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddRazorPages();
-builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
+//builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
+builder.Services.AddApplicationInsightsTelemetry(new ApplicationInsightsServiceOptions
+{
+    ConnectionString = builder.Configuration["ApplicationInsights:ConnectionString"],
+    EnableActiveTelemetryConfigurationSetup = true
+});
 
 var app = builder.Build();
 
